@@ -1,14 +1,18 @@
 # lgwd
 
-A Clojure library designed to ... well, that part is up to you.
+The legalize gay weed daemon.
+
+The world's greatest hello world is now a daemon. Simply telnet to this server
+and be satisfied with all the legalize gay weed you could want.
 
 ## Usage
 
-FIXME
+Don't do anything just yet. More will come.
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2014 Zak "Ubercow" Kristjanson
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Please see the LICENSE file for more details on use of
+this source code.
+
