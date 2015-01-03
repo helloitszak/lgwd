@@ -31,12 +31,11 @@
   (loop-lgw! stream info 0))
 
 (defn start-server
-  []
-  (let [port (or (System/getenv "LGWD_PORT") 1337)]
-    (tcp/start-server lgw-handler {:port port})
-    (println (str "Server started on " port))))
-
+  [port]
+  (tcp/start-server lgw-handler {:port port})
+  (println (str "Server started on " port)))
 
 (defn -main
   []
-  (start-server))
+  (start-server
+    (or (System/getenv "LGWD_PORT") 1337)))
