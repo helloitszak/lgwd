@@ -4,7 +4,8 @@
     [manifold.stream :as s]
     [manifold.time :as time]
     [lgwd.ansi :as ansi]
-    [lgwd.lgw :as lgw])
+    [lgwd.lgw :as lgw]
+    [taoensso.timbre :as timbre])
   (:gen-class))
 
 (defn pretty-host-port
@@ -23,17 +24,17 @@
                               0
                               (inc loopcount))))))
     (do
-      (println "disconnect " (pretty-host-port info)))))
+      (timbre/info "disconnection from " (pretty-host-port info)))))
 
 (defn lgw-handler
   [stream info]
-  (println "connect " (pretty-host-port info))
+  (timbre/info "connection from " (pretty-host-port info))
   (loop-lgw! stream info 0))
 
 (defn start-server
   [port]
   (tcp/start-server lgw-handler {:port port})
-  (println (str "Server started on " port)))
+  (timbre/info (str "Server started on " port)))
 
 (defn -main
   []

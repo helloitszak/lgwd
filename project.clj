@@ -4,5 +4,6 @@
   :license {:name "MIT"
             :url "http://opensource.org/licenses/MIT"}
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [aleph "0.4.0-alpha9"]]
+                 [aleph "0.4.0-alpha9"]
+                 [com.taoensso/timbre "3.3.1"]]
   :main lgwd.core)
