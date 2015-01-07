@@ -39,4 +39,4 @@
 (defn -main
   []
   (start-server
-    (or (System/getenv "LGWD_PORT") 1337)))
+    (Integer. (or (System/getenv "LGWD_PORT") 1337))))
